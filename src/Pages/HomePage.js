@@ -1,13 +1,14 @@
 import React from "react";
-import firstImage from "../Utils/images/homepage/firstImage.jpg";
+import firstImage from "../Assests/images/homepage/firstImage.jpg";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 import MapIcon from "@mui/icons-material/Map";
 import PreviewIcon from "@mui/icons-material/Preview";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
-import ImageText from "../Components/ImageText/ImageText";
-
+import About from "../Components/ImageText/About";
+import ScrollTimeline from "../Components/ScrollTimeline/ScrollTimeline";
+import SpanEffect from "../Components/SnapEffect/SpanEffect";
 
 export default function HomePage() {
    return (
@@ -23,7 +24,7 @@ export default function HomePage() {
          <Container
             maxWidth="md"
             sx={{
-               backgroundColor: "#FFFF",
+               backgroundColor: "background.main",
                marginTop: "-50px",
                position: "relative",
                display: "flex",
@@ -55,8 +56,20 @@ export default function HomePage() {
                4K+ Subscribers
             </Box>
          </Container>
-         <Container maxWidth="xl" sx={{marginTop:"2rem"}}>
-            <ImageText />
+         <Container
+            maxWidth="xl"
+            sx={{
+               marginTop: "2rem",
+               backgroundColor: "background.secondary",
+               padding: "4rem",
+            }}
+         >
+            <About />
+         </Container>
+         <SpanEffect />
+
+         <Container maxWidth="lg">
+            <ScrollTimeline />
          </Container>
       </>
    );

@@ -1,14 +1,15 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import img1 from "../../Utils/images/homepage/aboutImage1.jpg";
-import img2 from "../../Utils/images/homepage/aboutImage2.jpg";
+import img1 from "../../Assests/images/homepage/aboutImage1.jpg";
+import img2 from "../../Assests/images/homepage/aboutImage2.jpg";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-export default function ImageText() {
+export default function About() {
    const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("lg"));
    const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 
@@ -24,7 +25,7 @@ export default function ImageText() {
    }
    return (
       <Container maxWidth="lg">
-         <Grid container spacing={2} style={{ justifyContent: "space-evenly" }}>
+         <Grid container spacing={2} sx={{ justifyContent: "space-evenly" }}>
             <Grid>
                <ImageList
                   cols={img_col}
@@ -64,6 +65,14 @@ export default function ImageText() {
                   <p>It’s a big wide world out there, come see it with us</p>
                </Typography>
             </Grid>
+         </Grid>
+         <br />
+         <hr />
+         <Grid container sx={{justifyContent:'space-evenly', textAlign:"center", gap:"1rem"}}>
+            <Box>Blogger of the Year, <br /><b> British Guild of Travel Writers (2022)</b></Box>
+            <Box>Blogger of the Year, <br /><b> TravMedia Awards (2021)</b></Box>
+            <Box>Blogger of the Year, <br /><b> Blogosphere Awards (2021)</b></Box>
+            <Box>Blogger of the Year, <br /><b> Travel Media Awards (2020)</b></Box>
          </Grid>
       </Container>
    );

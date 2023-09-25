@@ -7,6 +7,10 @@ const theme = createTheme({
          main: "#00a7fe",
          hover: "#7dd3ff",
       },
+      background: {
+         main: "#FFFF",
+         secondary: "#f0f0f0"
+      }
    },
 });
 
